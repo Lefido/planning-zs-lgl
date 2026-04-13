@@ -1,13 +1,18 @@
-# TODO: Ajout de commentaires français dans script.js
+# TODO Progress Tracker for BLACKBOXAI Tasks
 
-## Étapes complétées:
-- [x] 1. Créer ce fichier TODO.md
-- [x] 2. Ajouter commentaires aux constantes et fonctions de stockage (load/save)
-- [x] 3. Ajouter commentaires aux fonctions d'initialisation et sélection manuelle de date
-- [x] 4. Ajouter commentaires aux fonctions de rendu calendrier (renderCalendar, createDayCell, etc.)
-- [x] 5. Ajouter commentaires aux fonctions de modal et événements (openModal, saveEvents, etc.)
-- [x] 6. Ajouter commentaires aux event listeners et init finale
-- [x] 7. Vérifier et compléter la tâche
+## Current Task: Integrate snipers.png into .logo div
 
-## Terminé ✅
+✅ **Step 1:** Understand project files (index.html, styles.css confirmed, logo div empty).
+
+✅ **Step 2:** Plan confirmed by user (add img to index.html, CSS for .logo/.logo-img).
+
+✅ **Step 3:** Edited index.html (inserted img into .logo div).
+
+✅ **Step 4:** Edited styles.css (added .logo and .logo-img styles).
+
+✅ **Step 5:** Verified edits (diffs show correct insertion and styling). Image integrated successfully.
+
+**Task complete!**
+
+Updated after plan approval.
 

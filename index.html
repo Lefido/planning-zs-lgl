@@ -1,33 +1,50 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Planning ZeShoes & LGL</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
     <div class="container">
         <!-- Titre stylé sans icônes -->
         <div class="page-title">
+            <div class="logo">
+                <img src="assets/snipers.png" alt="Logo ZeShoes & LGL" class="logo-img">
+            </div>
             <div class="title-main">
                 <span class="title-zeshoes">ZeShoes</span>
                 <span class="title-separator">&</span>
                 <span class="title-lgl">LGL</span>
+                 <div class="title-subtitle">Planning</div>
             </div>
-            <div class="title-subtitle">Planning</div>
+            <div class="logo">
+                <img src="assets/la_poste.png" alt="Logo La Poste" class="logo-img">
+            </div>
+           
         </div>
-        
+
         <div class="header">
-            <h1 class="month-year" id="monthYear" onclick="toggleManualDateSelector()" title="Cliquer pour changer manuellement"></h1>
+            <h1 class="month-year" id="monthYear" onclick="toggleManualDateSelector()"
+                title="Cliquer pour changer manuellement"></h1>
             <div class="nav-buttons">
-                <button class="btn btn-prev" onclick="changeMonth(-1)">← Précédent</button>
-                <button class="btn btn-next" onclick="changeMonth(1)">Suivant →</button>
-                <button class="btn btn-reset" onclick="resetToToday()" title="Retour à aujourd'hui">📍</button>
-                <button class="btn btn-print" onclick="printPlanning()" title="Imprimer le planning">🖨️</button>
+                <button class="btn btn-prev" onclick="changeMonth(-1)"><i
+                        class="fa-solid fa-arrow-left"></i>Précédent</button>
+                <button class="btn btn-next" onclick="changeMonth(1)">Suivan<i
+                        class="fa-solid fa-arrow-right"></i></button>
+                <button class="btn btn-reset" onclick="resetToToday()" title="Retour à aujourd'hui"><i
+                        class="fas fa-location-crosshairs"></i></button>
+                <button class="btn btn-print" onclick="printPlanning()" title="Imprimer le planning"><i
+                        class="fas fa-print"></i></button>
             </div>
         </div>
-        
+
         <!-- Sélecteurs manuels de date -->
         <div class="manual-date-selector" id="manualDateSelector">
             <div class="date-select-group">
@@ -41,12 +58,12 @@
             <button class="btn-apply-date" onclick="applyManualDate()">Appliquer</button>
             <button class="btn-cancel-date" onclick="toggleManualDateSelector()">Annuler</button>
         </div>
-        
+
         <div class="calendar-wrapper">
             <div class="calendar-header" id="calendarHeader"></div>
             <div class="calendar-body" id="calendarBody"></div>
         </div>
-        
+
         <!-- Info d'impression (visible uniquement à l'impression) -->
         <div class="print-info" id="printInfo"></div>
     </div>
@@ -55,7 +72,7 @@
     <div class="modal-overlay" id="modal">
         <div class="modal">
             <div class="modal-header" id="modalDate"></div>
-            
+
             <div class="zeshoes-section">
                 <div class="section-title zeshoes-title">ZeShoes</div>
                 <div class="form-group">
@@ -63,7 +80,7 @@
                     <input type="text" id="zeshoesName" placeholder="Entrez un nom..." autocomplete="off">
                 </div>
             </div>
-            
+
             <div class="lgl-section">
                 <div class="section-title lgl-title">LGL</div>
                 <div class="form-group">
@@ -71,10 +88,11 @@
                     <input type="text" id="lglName" placeholder="Entrez un nom..." autocomplete="off">
                 </div>
             </div>
-            
+
             <div class="modal-buttons">
                 <button class="btn-cancel" onclick="closeModal()">Annuler</button>
-                <button class="btn-delete" onclick="deleteEvents()" id="deleteBtn" style="display: none;">Supprimer</button>
+                <button class="btn-delete" onclick="deleteEvents()" id="deleteBtn"
+                    style="display: none;">Supprimer</button>
                 <button class="btn-save" onclick="saveEvents()">Valider</button>
             </div>
         </div>
@@ -84,4 +102,5 @@
     <div class="notification" id="notification"></div>
     <script src="script.js"></script>
 </body>
+
 </html>
